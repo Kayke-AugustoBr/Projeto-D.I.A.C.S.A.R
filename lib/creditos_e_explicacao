@@ -1,0 +1,49 @@
+Olá meu nome é Kayke Augusto, formando da Universidade Federal de Viçosa - Campus Florestal,
+e eu desenvolve esse projeto, em conjunto com meu grupo de Trabalho de Conclução de Curso (TCC), 
+com a finalidade de Desenvolver e Implementar um Aplicativo de Controle de Automação Residencial 
+(Nome referente ao nome do Aplicativo, D.I.A.C.S.A.R) que controlaria um sistema de leds, motores 
+e bomba d'água. Nesse sentido, estou criando esse projeto e comentando esse código como forma 
+didática. Mas é necessário uma pequeno conhecimento de Flutter para entender cada comando e função, 
+então sugiro que vejam vídeos didáticos que expliquem como funciona e como programar em Flutter. 
+
+Nesse programa vocês veram funções simples utilizadas com muita frequência em programações em 
+Flutter, mas o diferencial do projeto se trata de uma comunicação bluetooth com uma maquete
+onde forama acrescentados os componentes elétricos acima. Então, deixo abaixo algumas informações
+e fontes de pesquisa que eu sugiro utilizarem em caso de alguma dúvida sobre a programação.
+
+Existem dois tipos de bluetooth, o bluetooth ble e o bluetooth classic. Nesse sentido, pesquisem
+sobre e vejam qual se adequa ao seu tipo de projeto. No nosso projeto foi utilizado o bluetooth 
+classic (que você pode encontrar em bibliotecas e links), mas se o seu for o bluetooth ble a 
+biblioteca mais utilizada na época do projeto foi:
+
+- https://pub.dev/packages/flutter_blue_plus
+
+Caso você utilize o bluetooth classic, abaixo estão as bibliotecas e links que foram utilizados
+no projeto.
+
+Bibliotecas utilizadas e links para as mesmas:
+
++ flutter_bluetooth_serial  //https://pub.dev/packages/flutter_bluetooth_serial/versions/0.4.0
++ flutter_lints             //https://pub.dev/packages/flutter_lints
++ typed_data                //https://pub.dev/packages/typed_data
++ async                     //https://pub.dev/packages/async
++ convert                   //https://pub.dev/packages/convert
+ 
+Lembrando que no projeto foi utilizado o módulo bluetooth HC-05, então nesse projeto tivemos que
+utilizar uma codificação binária conhecida como Uint8List (recomendo uma pesquisa sobre). Que é 
+utilizada para o envio de strings decimais em forma binária para leitura do HC-05. Então se for 
+utilizar comandos do tipo, lembre que você precisa do Unit8List para enviar informações e de um 
+conversor do mesmo para decimal, para que o microcontrolador (se programado no Arduino IDE) possa
+ler os comandos enviados.
+
+Também existem dois tipos de conexão bluetooth entre o aplicativo e o módulo HC-05. Nesse sentido, 
+você pode utilizar a pesquisa por aparelhos próximos do próprio aplicativo (configurados nas
+permissões do aplicativo no próprio aparelho), emparelhas usando a senha do módulo HC-05 (A senha 
+vem de fábrica, mas costumam ser '0000' ou '1234' e você pode trocar a senha se quiser colocando 
+o HC-05 no modo mestre) e depois fazendo a programação para ele procurar pelo HC-05, se conectar e
+emparelhar o dispositivo. Ou, você pode utilizar o próprio endereço do bluetooth (que também vem de
+fabrica mas você precisa de um aplicativo externo para vê sua numeração) que costuma ser algo parecido 
+com 00:00:00:00:00:00 (Possuindo números e letras) para conectar diretamente o aplicativo ao HC-05. 
+Nesse projeto, utilizamos a primeira opção.
+
+Contudo, desejo para quem for utilizar a programação posteriormente. Boa sorte!!
